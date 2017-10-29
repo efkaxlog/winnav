@@ -1,0 +1,9 @@
+nbproject/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+Makefile
+.dep.inc
+*.swp

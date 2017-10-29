@@ -1,0 +1,12 @@
+winnav logbook
+
+===================
+Week 1 - 23/10/2017
+===================
+24/10/2017
+Started the project. Added functionality of moving windows to any side or corner of the screen.
+
+26/10/2017
+While testing the so far basic feature of moving windows, I've found many things that will need to be addressed. Firstly I have to figure out and implement how to make this feature work with multiple monitors as in its current state it's bugged.
+Secondly, I've realised some windows have a maximum size limit, for example the windows command line. I don't know how to bypass this, how to maybe override the maximum size limit.
+Thirdly, the hotkeys I'm currently using are Left Windows Key + Left Shift (+ and arrow keys for moving windows). The issue here is that Windows by default uses that combination (without the arrow keys) to switch between keyboard languages. At least that's the combination in Windows 7, which is the version of Windows I'm testing this on. The user will either have to make sure to always press the full key combination to not accidentally switch his keyboard language or I will have to find another key combination which is just as handy, and Windows doesn't use it by default. Another regarding the hotkeys is that if the user runs this program, and has already got a program that has this particular combination registered, it will break their program. I will have to give the option for the user to register their own preferred combination.
