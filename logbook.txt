@@ -35,3 +35,12 @@ I have also found out that Windows 10 has this functionality by default, but usi
 An idea for an extra feature that uses the mouse has came up. It would be a feature that would allow the user to resize multiple windows at once. For example if the user has three windows open on one monitor, two stacked on one side of the screen in top and bottom corners, and one window taking the whole other side of the screen, resizing one window using the mouse, would cause the other windows to be resized to fit. I am aware that this might be out of scope for this project, that this might be too hard or can take too long too implement and that I have no idea yet of how to handle mouse events using the Windows API, but it's a possibility.
 
 For next week, I plan to test moving windows on multiple monitor configurations and probably fix bugs that I will find. I will also test with different monitors having different resolutions. I don't think I will find any problems with this but there probably will be.
+
+===================
+Week 4 - 13/11/2017
+===================
+I have fixed some minor bugs. Window moving now works on any screen in two monitor configurations.
+
+I have noticed a weird bug while testing on Windows 10. Whenever moving a window anywhere, there is always a gap about 10 pixels big between the window and the edge of the screen. This occurs on any side of the screen except the top part. I haven't noticed anything like this on Windows 7.
+
+There is another bug I have noticed. When resizing a console window of the program Git Bash using my program, the text in the console increases size greatly, as I resize it to a bigger size. When I resize it using any other windows way, whether it's a hotkey or using a mouse this doesn't happen. I strongly suspect I can fix this. I'm resizing the window by calling a WinAPI function SetWindowPos(...). There can be some flags passed to that function that determine how the window behaves when that function is called (e.g. whether the window should be redrawn etc.). I think the reason this bug is here is because the lack fo some flags. I also wonder how many other programs I can break with my window manager.

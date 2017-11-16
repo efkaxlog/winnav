@@ -33,16 +33,16 @@ void winnav::moveWindow(char loc) {
     int x = monitorRect.left;
     int y = monitorRect.top;
 	int width = monitorRect.right - x;
-	int height = monitorRect.bottom;
+	int height = monitorRect.bottom - y;
     int halfRight = width / 2;
     int halfBottom = height / 2;
 
 	switch (loc) {
 	case TOP:
-		height = halfBottom;
+		height -= halfBottom;
 		break;
 	case BOTTOM:
-		y = halfBottom;
+		y += halfBottom;
 		height = halfBottom;
 		break;
 	case LEFT:
@@ -58,11 +58,11 @@ void winnav::moveWindow(char loc) {
 		if (loc == TOP_RIGHT) {
 			x += halfRight;
 		} else if (loc == BOT_LEFT) {
-			y = halfBottom;
+			y += halfBottom;
 		}
 		else if (loc == BOT_RIGHT) {
 			x += halfRight;
-			y = halfBottom;
+			y += halfBottom;
 		}
 		break;
 	}
